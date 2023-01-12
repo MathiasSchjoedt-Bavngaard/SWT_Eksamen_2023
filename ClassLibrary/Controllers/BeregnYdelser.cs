@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,35 +18,35 @@ namespace ClassLibrary.Controllers
         public BeregnYdelser()
         {
             _renteserver = new RenteserverInterface();
-            _renteserver.NyRente += new EventHandler(RenteSkiftet);
+            _renteserver.NyRente += RenteSkiftet;
             _display = new Display();
             AktuelRente = 0.05;
         }
         public BeregnYdelser(IRenteserverInterface renteserver)
         {
             _renteserver = renteserver;
-            _renteserver.NyRente += new EventHandler(RenteSkiftet);
+            _renteserver.NyRente += RenteSkiftet;
             _display = new Display();
             AktuelRente = 0.05;
         }
         public BeregnYdelser(IRenteserverInterface renteserver, IDisplay display)
         {
             _renteserver = renteserver;
-            _renteserver.NyRente += new EventHandler(RenteSkiftet);
+            _renteserver.NyRente += RenteSkiftet;
             _display = display;
             AktuelRente = 0.05;
         }
         public BeregnYdelser(IDisplay display)
         {
             _renteserver = new RenteserverInterface();
-            _renteserver.NyRente += new EventHandler(RenteSkiftet);
+            _renteserver.NyRente += RenteSkiftet;
             _display = display;
             AktuelRente = 0.05;
         }
 
-        private void RenteSkiftet(object? sender, EventArgs e)
+        private void RenteSkiftet(object? sender, NyRenteEventArgs e  )
         {
-            AktuelRente = _renteserver.Rente;
+            AktuelRente = e.NyRente;
             OpdaterRenteDisplayed();
         }
 
