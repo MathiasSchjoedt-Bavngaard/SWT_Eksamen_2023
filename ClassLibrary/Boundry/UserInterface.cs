@@ -7,17 +7,18 @@ namespace ClassLibrary.Boundry
     {
         IGodkendLaan _godkendLaan;
         IDisplay _display;
-        UserInterface()
+        
+        public UserInterface(IGodkendLaan godkendLaan, IDisplay display)
         {
-            _godkendLaan = new ClassLibrary.Controllers.GodkendLaan();
-            _display = new Display();
-            
+            _godkendLaan = godkendLaan;
+            _display = display;
+
         }
         
         
-        public void Ansoeg(double beloeb, int varighed, double indtaegt, double udgifter)
+        public bool Ansoeg(double beloeb, int varighed, double indtaegt, double udgifter)
         {
-            _godkendLaan.Ansoeg( beloeb,  varighed,  indtaegt,  udgifter);
+            return _godkendLaan.Ansoeg(beloeb, varighed, indtaegt, udgifter);
         }
     }
 }
