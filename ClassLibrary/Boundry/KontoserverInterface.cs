@@ -1,6 +1,11 @@
-﻿namespace ClassLibrary.Boundry;
+﻿using ClassLibrary.Interfaces;
 
-public class KontoserverInterface
+namespace ClassLibrary.Boundry;
+
+public class KontoserverInterface : IKontoserverInterface
 {
-    
+    public bool BogFoerBeloeb(double beloeb, int kontoNummer)
+    {
+        throw new NotImplementedException();
+    }
 }
