@@ -1,6 +1,11 @@
-﻿namespace ClassLibrary.Boundry;
+﻿using ClassLibrary.Interfaces;
 
-public class RenteserverInterface
+namespace ClassLibrary.Boundry;
+
+public class RenteserverInterface : IRenteserverInterface
 {
+    public double Rente { get; private set; }
+
+    public event EventHandler NyRente;
     
 }
