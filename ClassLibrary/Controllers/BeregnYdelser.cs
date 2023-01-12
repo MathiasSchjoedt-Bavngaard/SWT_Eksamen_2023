@@ -12,8 +12,8 @@ namespace ClassLibrary.Controllers
     {
         public double AktuelRente { get; private set; }
 
-        private IRenteserverInterface _renteserver;
-        private IDisplay _display;
+        public IRenteserverInterface _renteserver { get; init; }
+        public IDisplay _display { get; init; }
 
         public BeregnYdelser()
         {
@@ -57,22 +57,22 @@ namespace ClassLibrary.Controllers
         
 
         public double BeregnYdelse(double beloeb, int varighed)
-    {
-        double ydelse = double.MaxValue;
-
-        if (varighed >= 1 && varighed <= 120)
         {
-            if (AktuelRente == 0)
-            {
-                ydelse = beloeb / varighed;
-            }
-            else
-            {
-                ydelse = beloeb * AktuelRente / (1 - Math.Pow(1 + AktuelRente, -varighed));
-            }
-        }
+            double ydelse = double.MaxValue;
 
-        return ydelse;
-    }
+            if (varighed >= 1 && varighed <= 120)
+            {
+                if (AktuelRente == 0)
+                {
+                    ydelse = beloeb / varighed;
+                }
+                else
+                {
+                    ydelse = beloeb * AktuelRente / (1 - Math.Pow(1 + AktuelRente, -varighed));
+                }
+            }
+
+            return ydelse;
+        }
     }
 }
