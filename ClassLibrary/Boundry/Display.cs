@@ -29,7 +29,7 @@ namespace ClassLibrary.Boundry
 
         public void OpdaterLaaneRente(double rente)
         {
-            _myOutput.OutputLine($"Laan rente er nu: {rente} % ");
+            _myOutput.OutputLine($"Laan rente er nu: {rente*100} % ");
         }
     }
 }

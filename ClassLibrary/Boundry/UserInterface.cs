@@ -5,8 +5,8 @@ namespace ClassLibrary.Boundry
 
     public class UserInterface : IUserInterface
     {
-        IGodkendLaan _godkendLaan;
-        IDisplay _display;
+        public IGodkendLaan _godkendLaan { get; set; }
+        public IDisplay _display { get; set; }
         
         public UserInterface(IGodkendLaan godkendLaan, IDisplay display)
         {

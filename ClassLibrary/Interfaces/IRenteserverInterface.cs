@@ -4,6 +4,7 @@ public interface IRenteserverInterface
 {
     double Rente { get; }
     event EventHandler<NyRenteEventArgs> NyRente;
+    void SetRente(double nyRente);
 }
 
 public class NyRenteEventArgs : EventArgs

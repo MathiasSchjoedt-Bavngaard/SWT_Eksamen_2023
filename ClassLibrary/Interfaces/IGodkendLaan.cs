@@ -10,6 +10,9 @@ namespace ClassLibrary.Interfaces
     {
         public bool Ansoeg(double beloeb, int varighed, double indtaegt, double udgifter);
         public bool FrigivLaan(double beloeb,int kontonummer);
-
+        public IKontoserverInterface _kontoserver { get; set; }
+        public IBeregnYdelser _beregnYdelser { get; set; }
+        public IDisplay _display { get; set; }
+        public IPrinter _printer { get; set; }
     }
 }
