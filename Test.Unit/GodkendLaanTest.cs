@@ -44,6 +44,16 @@ public class GodkendLaanTest
         Assert.That(_uut._printer, Is.EqualTo(_printer));
 
     }
+    
+    [TestCase(10000, 0.015, 60, 253.93)]
+    [TestCase(50000, 0.0025, 120, 482.80)]
+    [TestCase(100000, 0.005, 120, 1110.21)]
+    public void Ansoeg_returns_true(double beloeb, double rente, int varighed, double ydelse)
+    {
+        _uut._beregnYdelser.AktuelRente.Returns(rente);
+        _uut._beregnYdelser.BeregnYdelse(beloeb, varighed).Returns(ydelse);
+        Assert.That(_uut.Ansoeg(beloeb,varighed,50000,35400), Is.True);
+    }
 
     [TestCase(1000)]
     [TestCase(700)]
@@ -67,6 +77,8 @@ public class GodkendLaanTest
         _uut.Ansoeg(10000, 12, 10000, 1000);
         _display.Received(1).VisLaanGodkendt( ydelse);
     }
+    
+    
 
     [TestCase(900, 1234)]
     [TestCase(20000,12345)]

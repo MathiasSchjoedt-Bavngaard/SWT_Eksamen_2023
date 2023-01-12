@@ -32,7 +32,7 @@ namespace Test.Unit
         [TestCase(10000, 50, 254.93)]
         [TestCase(50000, 120, 482.80)]
         [TestCase(100000, 120, 1110.21)]
-        public void BlackBoxTesting_UdskrivLaaneDokument(double beloeb, int varighed, double ydelse)
+        public void BlackBoxTesting_maybe_UdskrivLaaneDokument(double beloeb, int varighed, double ydelse)
         {
             _uut.UdskrivLaaneDokument(beloeb, varighed, ydelse);
             _output.Received(1).OutputLine(Arg.Is<string>(str => str.Contains("Laan Dokument")));

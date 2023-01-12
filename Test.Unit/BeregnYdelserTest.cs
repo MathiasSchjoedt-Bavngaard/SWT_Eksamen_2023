@@ -20,22 +20,14 @@ public class BeregnYdelserTest
     }
 
 
-    [TestCase(0.05)]
-    [TestCase(0.10)]
-    [TestCase(0.005)]
-    [TestCase(0)]
-    [TestCase(-0.05)]
+    [TestCase(0.05)] [TestCase(0.10)] [TestCase(0.005)] [TestCase(0)] [TestCase(-0.05)]
     public void RecivedEvent_WithCorrect_Rente(double rente)
     {
         _renteserverInterface.NyRente += Raise.EventWith(new NyRenteEventArgs { NyRente = rente });
         Assert.That(_uut.AktuelRente, Is.EqualTo(rente));
     }
 
-    [TestCase(0.05)]
-    [TestCase(0.10)]
-    [TestCase(0.005)]
-    [TestCase(0)]
-    [TestCase(-0.05)]
+    [TestCase(0.05)] [TestCase(0.10)] [TestCase(0.005)] [TestCase(0)] [TestCase(-0.05)]
     public void RecivedEvent_AndSendt_toDisplay(double rente)
     {
         _renteserverInterface.NyRente += Raise.EventWith(new NyRenteEventArgs { NyRente = rente });
