@@ -6,6 +6,15 @@ public class KontoserverInterface : IKontoserverInterface
 {
     public bool BogFoerBeloeb(double beloeb, int kontoNummer)
     {
-        throw new NotImplementedException();
+
+        //not Implementet korrekt
+        if (beloeb > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
