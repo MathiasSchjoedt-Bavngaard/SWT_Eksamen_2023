@@ -1,6 +1,12 @@
-﻿namespace ClassLibrary.Boundry;
+﻿using ClassLibrary.Interfaces;
 
-public class Printer
+namespace ClassLibrary.Boundry;
+
+public class Printer : IPrinter
 {
+    public void UdskrivLaaneDokument(double beloeb, int varighed, double ydelse)
+    {
+        throw new NotImplementedException();
+    }
     
 }
