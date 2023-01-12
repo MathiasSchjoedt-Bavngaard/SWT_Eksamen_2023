@@ -16,5 +16,16 @@ namespace ClassLibrary.Controllers
             Console.WriteLine("Output Should be: " + (input + 2));
             return input + 2;
         }
+
+        public bool Ansoeg(double beloeb, int varighed, double indtaegt, double udgifter)
+        {
+
+            throw new NotImplementedException();
+        }
+
+        public bool FrigivLaan(int kontonummer)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

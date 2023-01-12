@@ -12,6 +12,11 @@ namespace ClassLibrary.Boundry
             _myOutput = output;
         }
 
+        public Display()
+        {
+            _myOutput = new Output();
+        }
+
 
         public void VisYdelseForStor(double ydelse)
         {
