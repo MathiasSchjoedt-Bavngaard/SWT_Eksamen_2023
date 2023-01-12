@@ -2,6 +2,6 @@
 
 public interface IBeregnYdelser
 {
-    public double BeregnYdelse(double beløb, int varighed);
+    public double BeregnYdelse(double beloeb, int varighed);
     
 }

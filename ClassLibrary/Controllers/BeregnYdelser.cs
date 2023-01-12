@@ -17,7 +17,7 @@ namespace ClassLibrary.Controllers
 
         // Denne metode er implementeret, men skal testes
         // Den bruger annuitetsformlen
-        public double BeregnYdelse(double beløb, int varighed)
+        public double BeregnYdelse(double beloeb, int varighed)
         {
             double ydelse = double.MaxValue;
 
@@ -25,11 +25,11 @@ namespace ClassLibrary.Controllers
             {
                 if (AktuelRente == 0)
                 {
-                    ydelse = beløb / varighed;
+                    ydelse = beloeb / varighed;
                 }
                 else
                 {
-                    ydelse = beløb * AktuelRente / (1 - Math.Pow(1 + AktuelRente, -varighed));
+                    ydelse = beloeb * AktuelRente / (1 - Math.Pow(1 + AktuelRente, -varighed));
                 }
             }
 

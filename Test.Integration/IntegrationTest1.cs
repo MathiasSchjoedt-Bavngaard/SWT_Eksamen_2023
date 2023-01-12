@@ -5,7 +5,7 @@ namespace Test.Intergration
     public class IntergrationTests
     {
 
-        IGodkendLån _controllerClass2;
+        IGodkendLaan _controllerClass2;
         Class1 _class1;
 
 
@@ -13,7 +13,7 @@ namespace Test.Intergration
         public void Setup()
         {
             _class1 = new Class1();
-            _controllerClass2 = new GodkendLån();
+            _controllerClass2 = new GodkendLaan();
         }
 
         [Test]

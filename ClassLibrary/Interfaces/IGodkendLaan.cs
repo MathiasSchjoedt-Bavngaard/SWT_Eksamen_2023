@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary.Interfaces
 {
-    public interface IGodkendLån
+    public interface IGodkendLaan
     {
         public int Method2(int input);
     }

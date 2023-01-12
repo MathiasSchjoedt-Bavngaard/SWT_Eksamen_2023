@@ -8,7 +8,7 @@ using ClassLibrary.Interfaces;
 
 namespace ClassLibrary.Controllers
 {
-    public class GodkendLån : IGodkendLån
+    public class GodkendLaan : IGodkendLaan
     {
         public int Method2(int input)
         {

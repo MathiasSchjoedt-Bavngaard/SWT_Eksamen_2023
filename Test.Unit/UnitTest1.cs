@@ -6,7 +6,7 @@ namespace Test.Unit
 {
     public class UnitTestExample
     {
-        IGodkendLån _controllerClass2;
+        IGodkendLaan _controllerClass2;
         Class1 _class1;
 
 
@@ -14,7 +14,7 @@ namespace Test.Unit
         public void Setup()
         {
             _class1 = new Class1();
-            _controllerClass2 = new GodkendLån();
+            _controllerClass2 = new GodkendLaan();
         }
 
         [Test]
