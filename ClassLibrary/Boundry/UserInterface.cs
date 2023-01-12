@@ -20,5 +20,10 @@ namespace ClassLibrary.Boundry
         {
             return _godkendLaan.Ansoeg(beloeb, varighed, indtaegt, udgifter);
         }
+
+        public bool FrigivLaan(double beloeb, int kontonummer)
+        {
+            return _godkendLaan.FrigivLaan(beloeb, kontonummer);
+        }
     }
 }
