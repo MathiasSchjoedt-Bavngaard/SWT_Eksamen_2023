@@ -55,9 +55,6 @@ namespace ClassLibrary.Controllers
             _display.OpdaterLaaneRente(AktuelRente);
         }
         
-        
-        // Denne metode er implementeret, men skal testes
-        // Den bruger annuitetsformlen
 
         public double BeregnYdelse(double beloeb, int varighed)
     {
