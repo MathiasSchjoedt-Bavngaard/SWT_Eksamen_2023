@@ -1,6 +1,6 @@
-﻿using Microwave.Classes.Interfaces;
+﻿using ClassLibrary.Interfaces;
 
-namespace Microwave.Classes.Boundary
+namespace ClassLibrary.Boundry
 {
     public class Output : IOutput
     {
