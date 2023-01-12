@@ -37,7 +37,7 @@ namespace ClassLibrary.Controllers
         public bool Ansoeg(double beloeb, int varighed, double indtaegt, double udgifter)
         {
             double ydelse = _beregnYdelser.BeregnYdelse(beloeb, varighed);
-            bool godkendt = (ydelse < BeregnTiProcent(indtaegt, udgifter));
+            bool godkendt = (ydelse <= BeregnTiProcent(indtaegt, udgifter));
             
             if (!godkendt)
             {
