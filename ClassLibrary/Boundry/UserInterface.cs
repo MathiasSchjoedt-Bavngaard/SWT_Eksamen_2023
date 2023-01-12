@@ -5,10 +5,19 @@ namespace ClassLibrary.Boundry
 
     public class UserInterface : IUserInterface
     {
-        public void VisYdelse(double ydelse)
+        IGodkendLaan _godkendLaan;
+        IDisplay _display;
+        UserInterface()
         {
-            Console.WriteLine("Ydelsen er: " + ydelse);
+            _godkendLaan = new ClassLibrary.Controllers.GodkendLaan();
+            _display = new Display();
+            
         }
-
+        
+        
+        public void Ansoeg(double beloeb, int varighed, double indtaegt, double udgifter)
+        {
+            _godkendLaan.Ansoeg( beloeb,  varighed,  indtaegt,  udgifter);
+        }
     }
 }
