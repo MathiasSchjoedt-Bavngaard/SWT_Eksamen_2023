@@ -57,7 +57,7 @@ namespace Test.Unit
         public void OpdaterLaaneRente(double rente)
         {
             _uut.OpdaterLaaneRente(rente);
-            _output.Received(1).OutputLine($"Laan rente er nu: {rente} % ");
+            _output.Received(1).OutputLine($"Laan rente er nu: {rente*100} % ");
         }
         
     }
