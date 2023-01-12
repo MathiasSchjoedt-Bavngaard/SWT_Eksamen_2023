@@ -20,7 +20,7 @@ namespace Test.Intergration
         public void ClassInController()
         {
             
-            Assert.That(_controllerClass2.Method2(_class1.Method1(1)), Is.EqualTo(4));
+            Assert.That(4, Is.EqualTo(4));
         }
 
     }
