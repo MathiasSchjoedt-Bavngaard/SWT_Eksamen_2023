@@ -5,7 +5,6 @@ namespace ClassLibrary.Boundry
     public class Display : IDisplay
     {
         private IOutput _myOutput;
-        public double LaanerRente { get; private set; }
 
         public Display(IOutput output)
         {
@@ -20,19 +19,17 @@ namespace ClassLibrary.Boundry
 
         public void VisYdelseForStor(double ydelse)
         {
-            throw new NotImplementedException();
+            _myOutput.OutputLine($"Ydelsen: {ydelse}  er for stor");
         }
 
         public void VisLaanGodkendt(double ydelse)
         {
-            throw new NotImplementedException();
+            _myOutput.OutputLine($"Laan Godkendt med Ydelse: {ydelse} ");
         }
 
         public void OpdaterLaaneRente(double rente)
         {
-            LaanerRente = rente;
-
-            throw new NotImplementedException();
+            _myOutput.OutputLine($"Laan rente er nu: {rente} % ");
         }
     }
 }
