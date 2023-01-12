@@ -1,29 +1,31 @@
-﻿using Microwave.Classes.Interfaces;
+﻿using ClassLibrary.Interfaces;
 
-namespace Microwave.Classes.Boundary
+namespace ClassLibrary.Boundry
 {
     public class Display : IDisplay
     {
         private IOutput myOutput;
+        public double LaanerRente { get; private set; }
 
         public Display(IOutput output)
         {
             myOutput = output;
         }
 
-        public void ShowTime(int min, int sec)
+
+        public void VisYdelseForStor(double ydelse)
         {
-            myOutput.OutputLine($"Display shows: {min:D2}:{sec:D2}");
+            throw new NotImplementedException();
         }
 
-        public void ShowPower(int power)
+        public void VisLaanGodkendt(double ydelse)
         {
-            myOutput.OutputLine($"Display shows: {power} W");
+            throw new NotImplementedException();
         }
 
-        public void Clear()
+        public void OpdaterLaaneRente()
         {
-            myOutput.OutputLine($"Display cleared");
+            throw new NotImplementedException();
         }
     }
 }

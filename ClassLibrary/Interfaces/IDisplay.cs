@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Microwave.Classes.Interfaces
+namespace ClassLibrary.Interfaces
 {
     public interface IDisplay
     {
-        void ShowTime(int minutes, int seconds);
-        void ShowPower(int power);
-        void Clear();
+        void VisYdelseForStor(double ydelse);
+        void VisLaanGodkendt(double ydelse);
+        void OpdaterLaaneRente();
     }
 }
