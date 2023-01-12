@@ -6,13 +6,13 @@ namespace Test.Intergration
     {
 
         IGodkendLaan _controllerClass2;
-        Class1 _class1;
+       
 
 
         [SetUp]
         public void Setup()
         {
-            _class1 = new Class1();
+            
             _controllerClass2 = new GodkendLaan();
         }
 
