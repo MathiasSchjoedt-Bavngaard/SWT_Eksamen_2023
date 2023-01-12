@@ -10,6 +10,6 @@ namespace ClassLibrary.Interfaces
     {
         void VisYdelseForStor(double ydelse);
         void VisLaanGodkendt(double ydelse);
-        void OpdaterLaaneRente();
+        void OpdaterLaaneRente(double rente);
     }
 }

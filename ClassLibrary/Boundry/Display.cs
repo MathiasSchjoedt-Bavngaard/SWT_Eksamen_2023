@@ -4,12 +4,12 @@ namespace ClassLibrary.Boundry
 {
     public class Display : IDisplay
     {
-        private IOutput myOutput;
+        private IOutput _myOutput;
         public double LaanerRente { get; private set; }
 
         public Display(IOutput output)
         {
-            myOutput = output;
+            _myOutput = output;
         }
 
 
@@ -23,8 +23,10 @@ namespace ClassLibrary.Boundry
             throw new NotImplementedException();
         }
 
-        public void OpdaterLaaneRente()
+        public void OpdaterLaaneRente(double rente)
         {
+            LaanerRente = rente;
+
             throw new NotImplementedException();
         }
     }
