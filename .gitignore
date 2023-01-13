@@ -52,6 +52,7 @@ nunit-*.xml
 
 # ClassDesigner
 *.cd
+*.pdf
 
 
 
